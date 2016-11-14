@@ -88,15 +88,16 @@ void copy (char * input) {
 
 void reverse (char * input) {
     
-    char string[] ={"abcde"};
     char output[10];
     
     char * sourceptr;
     char * destptr;
-    sourceptr = string;
+    sourceptr = input;
     destptr = output;
     
-    short int length=strlen(string);
+    short int length=strlen(input);
+    sourceptr = sourceptr + length - 1;
+    
     printf("Length= %d \n",length);
     
     int k=0;
@@ -106,11 +107,11 @@ void reverse (char * input) {
         
         *destptr = *sourceptr;
         destptr++;
-        sourceptr++;
+        sourceptr--;
     }
-    *destptr='\0';
+    *destptr='\n';
     
-    printf("%s", output);
+    printf("%s**\n", output);
     
 }
 
