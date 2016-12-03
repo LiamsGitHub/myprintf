@@ -15,9 +15,12 @@ void reverse(char * input);
 
 int main(int argc, const char * argv[]) {
     
-
-    reverse("Any");
-
+    int value =436;
+    
+    myprintf("Hello",55);
+    myprintf("Hello",value);
+    
+    
     return 0;
 }
 
@@ -53,65 +56,8 @@ void myprintf(char* text, int value) {
     }
     
 
-    printf("%s %s \n",text,ptr);
+    printf("%s %s\n",text,ptr);
 
 }
 
-
-void copy (char * input) {
-    
-    char string[] ={"abcde"};
-    char output[10];
-    
-    char * sourceptr;
-    char * destptr;
-    sourceptr = string;
-    destptr = output;
-    
-    short int length=strlen(string);
-    printf("Length= %d \n",length);
-    
-    int k=0;
-    for (k=0;k<length;k++) {
-        
-        //printf("%p \n",destptr);
-        
-        *destptr = *sourceptr;
-        destptr++;
-        sourceptr++;
-    }
-    *destptr='\0';
-    
-    printf("%s", output);
-    
-}
-
-void reverse (char * input) {
-    
-    char output[10];
-    
-    char * sourceptr;
-    char * destptr;
-    sourceptr = input;
-    destptr = output;
-    
-    short int length=strlen(input);
-    sourceptr = sourceptr + length - 1;
-    
-    printf("Length= %d \n",length);
-    
-    int k=0;
-    for (k=0;k<length;k++) {
-        
-        //printf("%p \n",destptr);
-        
-        *destptr = *sourceptr;
-        destptr++;
-        sourceptr--;
-    }
-    *destptr='\n';
-    
-    printf("%s**\n", output);
-    
-}
 
